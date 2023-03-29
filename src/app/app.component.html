@@ -1,0 +1,81 @@
+<!-- <particles id="particles" [params]="myParams" [style]="myStyle" [width]="width" [height]="height"></particles> -->
+
+<nav class="my-header" [ngClass]="{'page-scroll-header' : isScrolled}">
+    <div class="mobile-menu" (click)="renderMenu()">
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+        </div>
+    </div>
+
+    <ul class="links-container">
+        <li (click)="scrollToSection('.home')">Home</li>
+        <li (click)="scrollToSection('.about')">About</li>
+        <li (click)="scrollToSection('.projects')">Projects</li>
+    </ul>
+
+    <div class="socials">
+        <a href="https://github.com/Abhishekgarg5330"><img src="./assets/icons/icons8-github.svg" alt="github"></a>
+        <a href="https://www.linkedin.com/in/abhishek-garg-787095bb/"><img
+                src="./assets/icons/icons8-linkedin-circled.svg" alt="linkedin"></a>
+        <a href="./assets/images/Abhishek Garg.pdf"><img style="width:24px;height:24px"
+                src="./assets/icons/icons8-cv-32.png" alt="resume icon"></a>
+    </div>
+
+    <h1 class="header-name">Abhishek Garg</h1>
+</nav>
+
+<!-- Mobile menu  -->
+<div class="menu">
+    <div class="mobile-links">
+        <ul>
+            <div class="mobile-link" style="border-top: dotted white 1px;" (click)="scrollToSection('.home')">
+                <img src="./assets/icons/home.svg" alt="home icon">
+                <li>Home</li>
+                <img src="./assets/icons/arrow-right.png" alt="home icon" class="arrow-right">
+            </div>
+            <div class="mobile-link" (click)="scrollToSection('.about')">
+                <img src="./assets/icons/about.svg" alt="home icon">
+                <li>About</li>
+                <img src="./assets/icons/arrow-right.png" alt="home icon" class="arrow-right">
+            </div>
+            <div class="mobile-link" (click)="scrollToSection('.projects')">
+                <img src="./assets/icons/projects.png" alt="home icon" class="project-image">
+                <li>Projects</li>
+                <img src="./assets/icons/arrow-right.png" alt="home icon" class="arrow-right">
+            </div>
+          
+        </ul>
+
+        <div class="mobile-socials">
+            <a href="https://github.com/Abhishekgarg5330"><img src="./assets/icons/github.svg" alt="github"></a>
+            <a href="https://www.linkedin.com/in/abhishek-garg-787095bb/"><img src="./assets/icons/linkedin.svg"
+                    alt="linkedin"></a>
+            <a href="./assets/images/Abhishek Garg.pdf"><img style="width:24px;height:24px"
+                    src="./assets/icons/resume.png" alt="resume icon"></a>
+        </div>
+    </div>
+
+
+</div>
+
+<router-outlet></router-outlet>
+
+
+<!-- Footer -->
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Abhishek Garg</h4>
+
+            </div>
+            <div class="footer-col">
+                <h4>abhishekgarg8989@gmail.com</h4>
+
+            </div>
+
+        </div>
+    </div>
+</footer>
